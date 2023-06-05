@@ -1,10 +1,26 @@
+import React from "react";
 import "./styles.css";
+import { UseAuthenticationComponent } from "./AuthenticationProvider";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
+
+import Login from "./Login";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <UseAuthenticationComponent>
+      <div className="App">
+        <div className="container-fluid">
+          <div
+            className="row justify-content-center align-items-center"
+            style={{ height: "100vh" }}
+          >
+            <div className="col">
+              <Login />
+            </div>
+          </div>
+        </div>
+      </div>
+    </UseAuthenticationComponent>
   );
 }
